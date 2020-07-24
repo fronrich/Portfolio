@@ -16,7 +16,11 @@ export default function Menu(props) {
 
   return (
     <div className="Menu">
-      <MenuButton colorID={props.colorID[1]} handler={passUp} onChange={passUp}/>
+      <MenuButton 
+        colorID={props.colorID[1]} 
+        handler={passUp} 
+        onChange={passUp}
+      />
       {ShowMenu(visible, props)}
     </div>
   )
@@ -26,9 +30,19 @@ function ShowMenu(isVisible, props) {
   var menuState = isVisible ? "" : "_Hidden";
   return (
     <div className="MenuWrapper">
-      <div className={`MenuOverlay${menuState} Background_${props.colorID[0]}`} />
-      <div className={`MenuContent${menuState}`}> 
-        <MenuLinks colorID={props.colorID[1]} />
+      <div 
+        className={
+          `Layer MenuOverlay${menuState} Background_${props.colorID[0]}`
+        } 
+      />
+      <div 
+        className={
+          `Layer MenuContent${menuState}`
+        }
+      > 
+        <MenuLinks 
+          colorID={props.colorID[1]} 
+        />
       </div>
     </div>
   )

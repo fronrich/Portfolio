@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 
 // components
-import SocialBar from "../components/social/socialBar";
+import SocialBar from "../components/Landing/social/socialBar";
+import Headline from '../components/Landing/headline';
 
 // image
 import Wallpaper from "../assets/cello_final_retouch.jpg";
@@ -31,7 +32,12 @@ function Body(THEME, blur) {
   return(
     <div className={`Body ${blurBackground} Background_${THEME[0]}`}>
       <img className="Wallpaper" src={Wallpaper} alt="cello" />
-      
+      <Headline 
+        item={
+          `Test Test`
+        }
+        colorID={THEME[1]}
+      />
     </div>
   )
 }

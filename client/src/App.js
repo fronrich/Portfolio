@@ -10,7 +10,9 @@ import Landing from "./routes/Landing";
 import './css/App.css';
 // component stylings
 import './css/components/social.css';
-import './css/components/menu.css'
+import './css/components/menu.css';
+import './css/components/general.css';
+import './css/components/headline.css'
 
 
 
