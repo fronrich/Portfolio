@@ -11,7 +11,7 @@ import UI from '../../database/uiConstants'
 export default function gui(props) {
   return (
     <div 
-      className={`Layer GUI`}
+      className={`Layer ForegroundGUI`}
     >
       {createInner(props.theme, props.routeState, props.elements)}
     </div>

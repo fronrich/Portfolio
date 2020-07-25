@@ -87,13 +87,6 @@
 
 /* define specific depths */
 
-/* A full-screen body */
-.Body {
-  z-index: 0;
-  text-align: center;
-  transition: 500ms;
-}
-
 .Wallpaper {
   position: absolute;
   top: 0;
