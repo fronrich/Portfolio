@@ -61,19 +61,3 @@ function Body(THEME, blur) {
     </div>
   )
 }
-// stuff in the header goes here
-function Header(THEME, routeState) {
-  return (
-    <div 
-      className={`Layer Header`}
-    >
-      <Menu 
-        colorID={THEME} 
-        handler={routeState}
-      />
-      <SocialBar 
-        colorID={THEME[1]}
-      />
-    </div>
-  )
-}
