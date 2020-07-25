@@ -15,14 +15,13 @@ export default function MenuLinks(props) {
 // generates links based on the links.json file
 function generateLinks() {
   let links = [];
-  let linkNames = Object.keys(Links);
-  let linkHrefs = Object.values(Links);
+
   // push links to list
-  for(var index = 0; index < linkNames.length; index++) {
+  Object.keys(Links).forEach((key, value, index) =>
     links.push(
-      MenuLink(index, linkNames[index], linkHrefs[index])
-    );
-  }
+      MenuLink(index, key, value)
+    )
+  );
   
   return links;
 }

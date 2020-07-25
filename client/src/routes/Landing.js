@@ -33,8 +33,14 @@ function Body(THEME, blur) {
   // blur occurs on menu opening
   let blurBackground = blur ? "Blur" : "";
   return(
-    <div className={`Layer Body ${blurBackground} Background_${THEME[0]}`}>
-      <img className="Wallpaper" src={Wallpaper} alt="cello" />
+    <div 
+      className={`Layer Body ${blurBackground} Background_${THEME[0]}`}
+    >
+      <img 
+        className="Wallpaper" 
+        src={Wallpaper} 
+        alt="cello" 
+      />
       {
         /*
          * Headline can be different on multiple pages which is why
@@ -51,9 +57,16 @@ function Body(THEME, blur) {
 // stuff in the header goes here
 function Header(THEME, routeState) {
   return (
-    <div className={`Layer Header`}>
-      <Menu colorID={THEME} handler={routeState}/>
-      <SocialBar colorID={THEME[1]}/>
+    <div 
+      className={`Layer Header`}
+    >
+      <Menu 
+        colorID={THEME} 
+        handler={routeState}
+      />
+      <SocialBar 
+        colorID={THEME[1]}
+      />
     </div>
   )
 }
