@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Links from '../../database/links.json';
+import Links from '../../../database/links.json';
 
 export default function MenuLinks(props) {
   
@@ -17,7 +17,7 @@ function generateLinks() {
   let links = [];
 
   // push links to list
-  Object.keys(Links).forEach((key, value, index) =>
+  Object.keys(Links).map((key, value, index) =>
     links.push(
       MenuLink(index, key, value)
     )

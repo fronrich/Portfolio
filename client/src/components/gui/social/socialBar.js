@@ -15,7 +15,7 @@ export default function SocialBar(props) {
 // generate social links
 function getLinks(colorID, data) {
   let list = [];
-  data.forEach((media, index) => (
+  data.map((media, index) => (
     list.push(
       <Social
         key={index}

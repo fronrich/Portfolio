@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 
 // components
-import SocialBar from "../components/Landing/social/socialBar";
-import Headline from '../components/Landing/headline';
+import SocialBar from "../components/gui/social/socialBar";
+import Headline from '../components/landing/headline';
 
 // image
 import Wallpaper from "../assets/cello_final_retouch.jpg";
@@ -10,7 +10,10 @@ import Wallpaper from "../assets/cello_final_retouch.jpg";
 //data
 import HeadlineData from '../database/headline'
 
-import Menu from "../components/menu/menu";
+import Menu from "../components/gui/menu/menu";
+
+// GUI
+import GUI from '../components/gui/gui'
 
 export default function Landing() {
   const [blur, setBlur] = useState(false);
@@ -22,7 +25,11 @@ export default function Landing() {
   return (
     <div>
       {Body(THEME, blur)}
-      {Header(THEME, routeState)}
+      <GUI 
+        theme={THEME}
+        routeState={routeState}
+        elements={["Menu", "Social"]}
+      />
     </div>
   )
 }

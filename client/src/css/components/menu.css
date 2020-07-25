@@ -25,6 +25,10 @@
   opacity: 0%;
 }
 
+.MenuTitle {
+  text-align: center;
+}
+
 .MenuLinks {
   width: fit-content;
   height: fit-content;
