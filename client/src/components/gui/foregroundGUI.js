@@ -1,7 +1,5 @@
 import React from 'react'
-
-import SocialBar from './social/socialBar'
-import Menu from './menu/menu'
+import UI from '../../database/uiConstants'
 
 /**
  * The most frontfacing GUI
@@ -23,19 +21,7 @@ export default function gui(props) {
 // generate inner componenets based on constants provided
 function createInner(theme, routeState, elements) {
   // const of element types
-  const ELEMENT_CONSTANTS = {
-    "Menu" : (
-      <Menu 
-        colorID={theme} 
-        handler={routeState}
-      />
-    ),
-    "Social" : (
-      <SocialBar 
-        colorID={theme[1]}
-      />
-    )
-  }
+  const ELEMENT_CONSTANTS = UI(theme, routeState).Foreground
 
   // render elements
   let list = []

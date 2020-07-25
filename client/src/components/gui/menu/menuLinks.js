@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import Links from '../../../database/links.json';
+import Links from '../../../database/links.json'
 
 export default function MenuLinks(props) {
   
@@ -21,7 +21,7 @@ function generateLinks() {
     links.push(
       MenuLink(index, key, value)
     )
-  );
+  )
   
   return links;
 }

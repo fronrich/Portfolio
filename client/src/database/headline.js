@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 
 export default function headline() {
   return (
     <div>
       <p>
-      "Red Lights Blue Nights" Out Now
+      "Red Lights Blue Nights" Out Now.
       </p>
       <p>
         Listen on&nbsp;
