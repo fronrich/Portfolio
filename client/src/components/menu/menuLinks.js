@@ -30,7 +30,7 @@ function generateLinks() {
 // a single menu link
 function MenuLink(key, name, link) {
   return (
-    <a className={`MenuLink`} href={link} key={key}>
+    <a className={`Element MenuLink`} href={link} key={key}>
       <span>~{name}~</span>
     </a>
   )

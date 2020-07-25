@@ -7,6 +7,9 @@ import Headline from '../components/Landing/headline';
 // image
 import Wallpaper from "../assets/cello_final_retouch.jpg";
 
+//data
+import HeadlineData from '../database/headline'
+
 import Menu from "../components/menu/menu";
 
 export default function Landing() {
@@ -30,12 +33,16 @@ function Body(THEME, blur) {
   // blur occurs on menu opening
   let blurBackground = blur ? "Blur" : "";
   return(
-    <div className={`Body ${blurBackground} Background_${THEME[0]}`}>
+    <div className={`Layer Body ${blurBackground} Background_${THEME[0]}`}>
       <img className="Wallpaper" src={Wallpaper} alt="cello" />
-      <Headline 
-        item={
-          `Test Test`
-        }
+      {
+        /*
+         * Headline can be different on multiple pages which is why
+         * json is passed here
+        */
+      }
+      <Headline
+        item={<HeadlineData />}
         colorID={THEME[1]}
       />
     </div>
@@ -44,7 +51,7 @@ function Body(THEME, blur) {
 // stuff in the header goes here
 function Header(THEME, routeState) {
   return (
-    <div className={`Header`}>
+    <div className={`Layer Header`}>
       <Menu colorID={THEME} handler={routeState}/>
       <SocialBar colorID={THEME[1]}/>
     </div>

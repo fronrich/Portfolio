@@ -12,7 +12,7 @@ export default function MenuButton(props) {
     props.handler();
   }
   return (
-    <div className="MenuButton" onClick={passUp}>
+    <div className={`Element MenuButton`} onClick={passUp}>
       {RenderStrips(visible, props)}
     </div>
   )

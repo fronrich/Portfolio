@@ -9,9 +9,9 @@ import Landing from "./routes/Landing";
 // universal stylings
 import './css/App.css';
 // component stylings
+import './css/components/general.css';
 import './css/components/social.css';
 import './css/components/menu.css';
-import './css/components/general.css';
 import './css/components/headline.css'
 
 

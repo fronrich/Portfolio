@@ -11,7 +11,7 @@ export default function headline(props) {
     <div className={`Layer HeadlineLayer`}>
       <div 
         className={
-          `Headline FontHeader Border_${props.colorID} Foreground_${props.colorID}`
+          `Element Headline FontMono Border_${props.colorID} Foreground_${props.colorID}`
         }
       >
         {props.item}

@@ -1,0 +1,18 @@
+[
+  {
+    "icon" : "fab fa-instagram",
+    "link" : "https://www.instagram.com/officialpingmusic/"
+  },
+  {
+    "icon" : "fab fa-soundcloud",
+    "link" : "https://soundcloud.com/ii_png" 
+  },
+  {
+    "icon" : "fab fa-github-alt",
+    "link" : "https://github.com/fronrich"
+  },
+  {
+    "icon" : "fab fa-linkedin-in",
+    "link" : "https://www.linkedin.com/in/fronrich-puno/"
+  }
+]

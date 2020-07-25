@@ -7,4 +7,10 @@
   left: 0;
   top: 0;
   position: fixed;
+  pointer-events: none;
+}
+
+/* Clickable Element */
+.Element {
+  pointer-events: all;
 }
