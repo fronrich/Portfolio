@@ -22,6 +22,9 @@ export default function UI_CONSTANTS(theme, routeState) {
           />
         )
       },
+      "Modal" : {
+
+      },
       "Background" : {
         "Wallpaper" : (
           <img 

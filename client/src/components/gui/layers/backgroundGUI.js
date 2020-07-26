@@ -1,5 +1,5 @@
 import React from 'react'
-import UI from '../../database/uiConstants'
+import UI from '../../../database/uiConstants'
 
 /**
  * Create a body for a webpage
