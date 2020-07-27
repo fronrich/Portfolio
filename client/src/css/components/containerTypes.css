@@ -21,6 +21,13 @@
   z-index: 1;
 }
 
+/* Layer using flexbox */
+.FlexLayer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* a transparent layer which takes up the entire screen */
 .Layer {
   width: 100%;

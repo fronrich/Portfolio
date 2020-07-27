@@ -17,9 +17,9 @@ function generateLinks() {
   let links = [];
 
   // push links to list
-  Object.keys(Links).map((key, value, index) =>
+  Object.keys(Links).map((key, index) =>
     links.push(
-      MenuLink(index, key, value)
+      MenuLink(index, key, Links[key])
     )
   )
   

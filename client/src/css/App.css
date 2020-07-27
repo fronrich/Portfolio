@@ -5,11 +5,11 @@
 
 :root {
   /* color scheme (adjusted to web-safe colors)*/
-  --color-1: #CCCCFF;
-  --color-2: #FFCC99;
-  --color-3: #FF99FF;
-  --color-4: #FFFF99;
-  --color-5: #66CC99;
+  --color-1: #AADFF1;
+  --color-2: #FBB57F;
+  --color-3: #F59DB2;
+  --color-4: #FCEC98;
+  --color-5: #80CAA5;
 
   /* define font types */
   --header: 'Roboto', sans-serif;
