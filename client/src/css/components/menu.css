@@ -16,7 +16,7 @@
 }
 
 .MenuOverlay {
-  opacity: 75%;
+  opacity: 25%;
   transition: 400ms;
   pointer-events: all;
 }

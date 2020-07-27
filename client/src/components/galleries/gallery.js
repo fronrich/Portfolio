@@ -7,7 +7,7 @@ import React from 'react'
  */
 export default function gallery(props) {
   return (
-    <div className={`Layer FlexLayer`}>
+    <div className={`Layer Floating FlexLayer`}>
       <div 
         className={
           `Element Gallery FontMono Border_${props.colorID} Foreground_${props.colorID}`

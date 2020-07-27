@@ -13,6 +13,7 @@
 /* Menu, Social, consistent but toggalable divs*/
 .ForegroundGUI {
   z-index: 2;
+  
 }
 
 
@@ -37,10 +38,15 @@
   position: fixed;
   pointer-events: none;
 
-  /* filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25)); */
+  /* filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)); */
 }
 
 /* Clickable Element */
 .Element {
   pointer-events: all;
+}
+
+/* Element or layer with shadow*/
+.Floating {
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }

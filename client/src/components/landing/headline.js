@@ -7,7 +7,7 @@ import React from 'react'
  */
 export default function headline(props) {
   return (
-    <div className={`Layer FlexLayer HeadlineLayer`}>
+    <div className={`Layer FlexLayer Floating HeadlineLayer`}>
       <div 
         className={
           `Element Headline FontMono Border_${props.colorID} Foreground_${props.colorID}`
