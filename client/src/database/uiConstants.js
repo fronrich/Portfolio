@@ -4,6 +4,7 @@ import Menu from '../components/gui/menu/menu'
 import Wallpaper from '../assets/cello_final_retouch.jpg'
 import Headline from '../components/landing/headline'
 import HeadlineData from './headline'
+import MusicGallery from '../components/galleries/musicGallery'
 
 // UI Warehouse
 export default function UI_CONSTANTS(theme, routeState) {
@@ -37,6 +38,11 @@ export default function UI_CONSTANTS(theme, routeState) {
           <Headline
             item={<HeadlineData />}
             colorID={theme[1]}
+          />
+        ),
+        "MusicGallery" : (
+          <MusicGallery 
+          colorID={theme[1]}
           />
         )
       }

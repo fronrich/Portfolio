@@ -2,7 +2,7 @@ import React from 'react'
 
 /**
  * Returns a container with important info
- * @param {String Array} props props.item can be whatever the headline is
+ * @param {String Array} props props.items a list of songs using SONG schema
  * @param {Number} props props.colorID must be theme compliant
  */
 export default function gallery(props) {

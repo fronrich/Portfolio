@@ -7,7 +7,7 @@ export default function Sound() {
       <Page 
         backgroundColor={1}
         foregroundColor={3}
-        backgroundElements={[]}
+        backgroundElements={["MusicGallery"]}
         foregroundElements={["Menu"]}
       />
     </div>

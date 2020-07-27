@@ -1,3 +1,36 @@
 .Gallery {
-  border: solid 4px;
+  padding: 20px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
+  display: flex;
+}
+
+.GalleryElement {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.GalleryImage:hover ~.GalleryCaption {
+  visibility: visible;
+}
+
+.GalleryElementLayer {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.GalleryCaption {
+  visibility: hidden;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  top: -200px
 }
