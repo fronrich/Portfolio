@@ -4,5 +4,6 @@ node_modules/
 
 CONFIRM.png
 
-#ignore this for now until deployment
+# the cache is a temporary place for processing
+# data to the frontend
 cache/
