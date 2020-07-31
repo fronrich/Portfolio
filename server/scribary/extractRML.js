@@ -1,4 +1,5 @@
-const puppeteer = require('puppeteer-extra');
+const puppeteer = require('puppeteer-extra')
+const Extra = require('./verboseHeader')
 
 // add stealth plugin and use defaults (all evasion techniques)
 const StealthPlugin = require('puppeteer-extra-plugin-stealth')
@@ -18,7 +19,7 @@ puppeteer.use(StealthPlugin())
  */
 async function extractRML(buffer, url, xPath, outputPath, verbose) {
   if(verbose) {
-    console.log("ScrAPI Version 1.0.0 - Running in verbose mode");
+    console.log(Extra.verboseHeader('1.1.0', 'extractRML'))
     console.log("Launching puppeteer...");
   }
   const browser = await puppeteer.launch({headless: true})
@@ -27,6 +28,8 @@ async function extractRML(buffer, url, xPath, outputPath, verbose) {
     console.log("Loading page...");
   await page.goto(url)
   await page.waitFor(buffer)
+  // TODO: Implement scrolling to load entire page
+  await autoScroll(page, buffer, 100, verbose);
   // await page.screenshot({ path: '../cache/CONFIRM.png', fullPage: true })
   if(verbose)
     console.log("Extracting HTML snippet...");
@@ -45,8 +48,31 @@ async function extractRML(buffer, url, xPath, outputPath, verbose) {
   await fs.writeFileSync(`${outputPath}.rml`, rawHTML)
   await browser.close()
   if(verbose)
-    console.log("Done!");
+    console.log("Done! Promise returned as rml.\n");
   return rawHTML
+}
+
+async function autoScroll(page, buffer, scrollLimit, verbose) {
+  let iteration = 0
+  const FRAME_SIZE = 100
+
+  // scroll
+  try {
+    while(iteration < scrollLimit) {
+      if(verbose) {
+        console.log(`At frame ${iteration}`)
+      }
+      await page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
+      await page.waitForFunction(`document.body.scrollHeight > ${FRAME_SIZE * iteration}`)
+      await iteration++
+      // await page.waitFor(buffer / 10)
+    }
+    if(verbose)
+      console.log(`Done after ${iteration} frames!`)
+  } catch (error) {
+    if(verbose)
+      console.log("END OF PAGE");
+  }
 }
 
 exports.extractRML = extractRML
