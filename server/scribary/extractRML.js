@@ -54,7 +54,7 @@ async function extractRML(buffer, url, xPath, outputPath, verbose) {
 
 async function autoScroll(page, buffer, scrollLimit, verbose) {
   let iteration = 0
-  const FRAME_SIZE = 100
+  const FRAME_SIZE = 1000
 
   // scroll
   try {
@@ -65,13 +65,10 @@ async function autoScroll(page, buffer, scrollLimit, verbose) {
       await page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
       await page.waitForFunction(`document.body.scrollHeight > ${FRAME_SIZE * iteration}`)
       await iteration++
-      // await page.waitFor(buffer / 10)
     }
-    if(verbose)
-      console.log(`Done after ${iteration} frames!`)
   } catch (error) {
     if(verbose)
-      console.log("END OF PAGE");
+    console.log(`Done after ${iteration} frames!`)
   }
 }
 
