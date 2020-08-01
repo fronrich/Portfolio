@@ -41,6 +41,7 @@ function ShowMenu(isVisible, props) {
         }
       > 
         <MenuLinks 
+          isVisible={isVisible}
           colorID={props.colorID[1]} 
         />
       </div>

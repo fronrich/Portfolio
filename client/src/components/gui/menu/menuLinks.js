@@ -4,7 +4,7 @@ import Links from '../../../database/links.json'
 
 export default function MenuLinks(props) {
   
-  const LINKS_LIST = generateLinks();
+  const LINKS_LIST = generateLinks(props);
   return (
     <div className={`MenuLinks FontHeader Foreground_${props.colorID}`}>
       {LINKS_LIST}
@@ -13,13 +13,13 @@ export default function MenuLinks(props) {
 }
 
 // generates links based on the links.json file
-function generateLinks() {
+function generateLinks(props) {
   let links = [];
 
   // push links to list
   Object.keys(Links).map((key, index) =>
     links.push(
-      MenuLink(index, key, Links[key])
+      MenuLink(props, index, key, Links[key])
     )
   )
   
@@ -27,9 +27,12 @@ function generateLinks() {
 }
 
 // a single menu link
-function MenuLink(key, name, link) {
+function MenuLink(props, key, name, link) {
+  const linkState = props.isVisible
+    ? 'Element'
+    : '' 
   return (
-    <a className={`Element MenuLink`} href={link} key={key}>
+    <a className={`${linkState} MenuLink`} href={link} key={key}>
       <span>~{name}~</span>
     </a>
   )
