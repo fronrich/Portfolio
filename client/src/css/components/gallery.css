@@ -6,6 +6,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  max-width: 90%;
+  max-height: 60%;
+  overflow-y: scroll;
+}
+
+.Gallery::-webkit-scrollbar {
+  display: none;
 }
 
 .GalleryElement {
@@ -14,7 +21,7 @@
   max-width: fit-content;
   height: 200px;
   width: 200px;
-  margin: 10px;
+  margin: 20px;
 }
 
 .GalleryImage:hover ~.GalleryCaption {

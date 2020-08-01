@@ -3,6 +3,11 @@
 /* import fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Roboto:wght@700&family=Work+Sans:wght@300&display=swap');
 
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* color scheme (adjusted to web-safe colors)*/
   --color-1: #AADFF1;
