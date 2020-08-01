@@ -1,4 +1,5 @@
 import React from 'react'
+import GalleryTitle from './galleryTitle'
 
 /**
  * Returns a container with important info
@@ -8,6 +9,11 @@ import React from 'react'
 export default function gallery(props) {
   return (
     <div className={`Layer Floating FlexLayer`}>
+      <GalleryTitle
+        colorID = {props.colorID}
+        title = {props.title}
+        subtitle = {props.subtitle}
+      />
       <div 
         className={
           `Element Gallery FontMono Border_${props.colorID} Foreground_${props.colorID}`

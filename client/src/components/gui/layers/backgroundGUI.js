@@ -15,7 +15,7 @@ export default function body(props) {
 
   return (
     <div
-      className={`Layer BackgroundGUI ${blurBackground} Background_${props.theme[0]}`}
+      className={`Layer FlexLayer BackgroundGUI ${blurBackground} Background_${props.theme[0]}`}
     >
       {createInner(props.theme, props.elements)}
     </div>

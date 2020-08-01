@@ -42,7 +42,9 @@ export default function UI_CONSTANTS(theme, routeState) {
         ),
         "MusicGallery" : (
           <MusicGallery 
-          colorID={theme[1]}
+            title="sounds"
+            subtitle="made with <3"
+            colorID={theme[1]}
           />
         )
       }

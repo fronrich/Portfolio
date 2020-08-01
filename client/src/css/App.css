@@ -75,19 +75,20 @@ html {
 /* text classes */
 .FontTitle {
   font-family: var(--header);
-  font-size: 96px;
+  font-size: 5em;
 } .FontSubtitle {
   font-family: var(--header);
-  font-size: 68px;
+  font-size: 4em;
+  line-height: 0.5em;
 } .FontHeader {
   font-family: var(--header);
-  font-size: 48px;
+  font-size: 3em;
 } .FontNormal {
   font-family: var(--normal);
-  font-size: 20px;
+  font-size: 1em;
 } .FontMono {
   font-family: var(--mono);
-  font-size: 20px;
+  font-size: 1em;
 }
 
 /* define specific depths */

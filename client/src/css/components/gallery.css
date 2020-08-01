@@ -1,7 +1,5 @@
 .Gallery {
-  padding: 20px;
   display: flex;
-  margin: 20px;
   height: auto;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,6 +11,10 @@
 
 .Gallery::-webkit-scrollbar {
   display: none;
+}
+
+.GalleryTitle {
+  margin: 0;
 }
 
 .GalleryElement {
@@ -45,5 +47,5 @@
   pointer-events: none;
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  top: -200px
+  top: -200px;
 }

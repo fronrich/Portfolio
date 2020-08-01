@@ -12,6 +12,8 @@ export default function musicGallery(props) {
   return (
     <div>
       <Gallery
+        title = {props.title}
+        subtitle = {props.subtitle}
         items={generateContents()}
         colorID={props.colorID}
       />
