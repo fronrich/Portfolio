@@ -14,7 +14,9 @@
 }
 
 .GalleryTitle {
-  margin: 0;
+  /* margin: -4em; */
+  width: min-content;
+  height: 1em;
 }
 
 .GalleryElement {
@@ -24,6 +26,10 @@
   height: 200px;
   width: 200px;
   margin: 20px;
+}
+
+.GalleryImage:hover {
+  filter: saturate(0);
 }
 
 .GalleryImage:hover ~.GalleryCaption {
@@ -45,7 +51,7 @@
   opacity: 0%;
   transition: 500ms;
   pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   top: -200px;
 }

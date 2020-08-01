@@ -42,7 +42,7 @@ const musicGalleryItem = (key, title, url, image) => {
   return (
     <a
       key={key}
-      className={`SongElement GalleryElement FontNormal`}
+      className={`SongElement GalleryElement FontMono`}
       href={url}
       target="_blank" 
       rel="noopener noreferrer"
