@@ -1,10 +1,8 @@
-// const puppeteer = require('puppeteer-extra')
-const puppeteer = require('puppeteer')
-const Extra = require('./verboseHeader')
-
+const puppeteer = require('puppeteer-extra')
 // add stealth plugin and use defaults (all evasion techniques)
-// const StealthPlugin = require('puppeteer-extra-plugin-stealth')
-// puppeteer.use(StealthPlugin())
+const StealthPlugin = require('puppeteer-extra-plugin-stealth')
+puppeteer.use(StealthPlugin())
+const Extra = require('./verboseHeader')
 
 /**
  * scraper utility created for the collection step of data mining
@@ -17,16 +15,25 @@ const Extra = require('./verboseHeader')
  * @param {String} url - website URL
  * @param {xPath} xPath - xpath to div you want to extract
  * @param {String} outputPath - relative location to cache
- * @param {Boolean} verbose - use console.log() output 
+ * @param {Boolean} verbose - use console.log() output
+ * @param {Number} mode - {0} for stealth,  {1} for debug
  * @returns .rml (raw markup language) which can be converted into HTML
  * via convertRML
  */
-async function extractRML(buffer, frameLimit, url, xPath, outputPath, verbose) {
+async function extractRML(
+  buffer, 
+  frameLimit, 
+  url, 
+  xPath, 
+  outputPath, 
+  verbose,
+  ) 
+{
   if(verbose) {
-    console.log(Extra.verboseHeader('1.2.2', 'extractRML'))
+    console.log(Extra.verboseHeader('1.2.3', 'extractRML'))
     console.log("Launching puppeteer...");
   }
-  const browser = await puppeteer.launch({headless: false})
+  const browser = await puppeteer.launch({headless: true})
   const page = await browser.newPage()
   await page.setViewport({ width: 1366, height: 3000})
   if(verbose)

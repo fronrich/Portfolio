@@ -1,12 +1,137 @@
 [
-  {
-    "title" : "Solo Duet",
-    "url" : "https://soundcloud.com/ii_png/solo-duet",
-    "image" : "https://i1.sndcdn.com/artworks-000493448466-avqmvz-t200x200.jpg"
-  },
-  {
-    "title" : "Why You",
-    "url" : "https://soundcloud.com/ii_png/why-you",
-    "image" : "https://i1.sndcdn.com/artworks-000451736223-3fa80m-t200x200.jpg"
-  }
+      {
+        "title" : "LOTTO LOVE FEAT. PiiNG",
+        "url" : "https://soundcloud.com/kouyamusic/lotto-love-feat-piing",
+        "image" : "https://i1.sndcdn.com/artworks-000566353550-kc8lqs-t200x200.jpg"
+      },
+      {
+        "title" : "Messy Reassessment",
+        "url" : "https://soundcloud.com/ii_png/messy-reassessment",
+        "image" : "https://i1.sndcdn.com/artworks-000523659255-vc73hf-t200x200.jpg"
+      },
+      {
+        "title" : "Mind Reader",
+        "url" : "https://soundcloud.com/ii_png/mind-reader",
+        "image" : "https://i1.sndcdn.com/artworks-000523659264-zh2eck-t200x200.jpg"
+      },
+      {
+        "title" : "Medisin",
+        "url" : "https://soundcloud.com/ii_png/medisin",
+        "image" : "https://i1.sndcdn.com/artworks-000523659246-kcaqus-t200x200.jpg"
+      },
+      {
+        "title" : "post-pathos",
+        "url" : "https://soundcloud.com/ii_png/sets/post-pathos",
+        "image" : "https://i1.sndcdn.com/artworks-000523659279-p0cyjt-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Solo Duet",
+        "url" : "https://soundcloud.com/ii_png/solo-duet",
+        "image" : "https://i1.sndcdn.com/artworks-000493448466-avqmvz-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - LVLess",
+        "url" : "https://soundcloud.com/ii_png/lvless",
+        "image" : "https://i1.sndcdn.com/artworks-000489914715-myvjf2-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Why You",
+        "url" : "https://soundcloud.com/ii_png/why-you",
+        "image" : "https://i1.sndcdn.com/artworks-000451736223-3fa80m-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Agape",
+        "url" : "https://soundcloud.com/ii_png/agape",
+        "image" : "https://i1.sndcdn.com/artworks-000458982900-1mish1-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Love Laced Strings Play (rain&heartbreak)",
+        "url" : "https://soundcloud.com/ii_png/love-laced-strings-play-rainheartbreak",
+        "image" : "https://i1.sndcdn.com/artworks-000390705321-ha5hni-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Atmosphere",
+        "url" : "https://soundcloud.com/ii_png/atmosphere",
+        "image" : "https://i1.sndcdn.com/artworks-000384390180-knxew2-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - (Don't) Mend Me",
+        "url" : "https://soundcloud.com/ii_png/mend-me",
+        "image" : "https://i1.sndcdn.com/artworks-000379829715-oxogrb-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Mother Mary",
+        "url" : "https://soundcloud.com/ii_png/mother-mary",
+        "image" : "https://i1.sndcdn.com/artworks-000377612505-aa8vhb-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - freestyleaboutadaisy",
+        "url" : "https://soundcloud.com/ii_png/freestyleaboutadaisy",
+        "image" : "https://i1.sndcdn.com/artworks-000376451421-8row0i-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Fools Gold",
+        "url" : "https://soundcloud.com/ii_png/fools-gold",
+        "image" : "https://i1.sndcdn.com/artworks-000373676547-5gbe6j-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - I Think This Is Healing",
+        "url" : "https://soundcloud.com/ii_png/i-think-this-is-healing",
+        "image" : "https://i1.sndcdn.com/artworks-000373672437-kx3qzj-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Twilight Lover",
+        "url" : "https://soundcloud.com/ii_png/twilight-lover",
+        "image" : "https://i1.sndcdn.com/artworks-000373243776-06hhvd-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - I Found",
+        "url" : "https://soundcloud.com/ii_png/i-found",
+        "image" : "https://i1.sndcdn.com/artworks-000364158729-imaiv4-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Lay Low",
+        "url" : "https://soundcloud.com/ii_png/lay-low",
+        "image" : "https://i1.sndcdn.com/artworks-000357766998-74skr9-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Bandaid",
+        "url" : "https://soundcloud.com/ii_png/bandaid",
+        "image" : "https://i1.sndcdn.com/artworks-000356390688-gyzxfz-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Lust Like You",
+        "url" : "https://soundcloud.com/ii_png/lust-like-you",
+        "image" : "https://i1.sndcdn.com/artworks-000355687383-1cq5xt-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - 12:52",
+        "url" : "https://soundcloud.com/ii_png/12u52",
+        "image" : "https://i1.sndcdn.com/artworks-000347243010-kzbrys-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Typo",
+        "url" : "https://soundcloud.com/ii_png/ping-typo",
+        "image" : "https://i1.sndcdn.com/artworks-000337981800-doehpv-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Shooting Star",
+        "url" : "https://soundcloud.com/ii_png/shooting-star",
+        "image" : "https://i1.sndcdn.com/artworks-000313583940-0ryr8w-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Hikari",
+        "url" : "https://soundcloud.com/ii_png/hikari",
+        "image" : "https://i1.sndcdn.com/artworks-000303412524-f3glpj-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - Condition",
+        "url" : "https://soundcloud.com/ii_png/ping-condition",
+        "image" : "https://i1.sndcdn.com/artworks-000291415182-s6nds9-t200x200.jpg"
+      },
+      {
+        "title" : "PiiNG - i77",
+        "url" : "https://soundcloud.com/ii_png/i77",
+        "image" : "https://i1.sndcdn.com/artworks-000288340202-ivf7eh-t200x200.jpg"
+      }
 ]
