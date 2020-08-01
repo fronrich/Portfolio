@@ -7,12 +7,12 @@ const Convert = require('../scribary/convertRML');
 
 async function main() {
   // set constants
-  const buffer = 500;
+  const buffer = 50;
   const url = 'https://soundcloud.com/ii_png'
   const xPath = '[class="soundList sc-list-nostyle"]'
   const outputPath = '../cache/SoundCloud'
 
-  const rml = await Extract.extractRML(buffer, url, xPath, outputPath, true)
+  const rml = await Extract.extractRML(buffer, 20, url, xPath, outputPath, true)
   // guarantee scraper worked
   console.assert(rml !== undefined, "soundCloudPrep() - rml is undefined")
   const NODE_DOM = Convert.convertRML(rml, true)
@@ -22,11 +22,30 @@ async function main() {
 }
 
 function queryIntoSchema(NODE_DOM) {
+  // retrive url
+  const songList = NODE_DOM.querySelectorAll('li.soundList__item')
+  generateJSON(songList)
+}
+
+function generateJSON(songList) {
   // ties the parsed url to the home directory of site
   const ROOT_URL = 'https://soundcloud.com'
-  // retrive url
-  const urlList = NODE_DOM.querySelectorAll('a.soundTitle__title')
-  console.log(urlList);
+  let list = []
+  
+  // iternate through NodeList and add elements to JSON
+  songList.forEach((soundObject, index) => {
+    // read url and title
+    const titleDiv = soundObject.querySelector('a.soundTitle__title')
+    const url = ROOT_URL + titleDiv.getAttribute('href')
+    const title = titleDiv.querySelector('span').textContent
+
+    // read image
+
+    console.log(url);
+    console.log(title);
+
+    // read 
+  })
 }
 
 /*** DO NOT CODE BELOW THIS LINE ***/
