@@ -1,5 +1,6 @@
-import React from 'react'
-import UI from '../../../database/uiConstants'
+import React from "react";
+import { createInner } from "./functions/createInner";
+import { Layer } from "./styles/layers.styles";
 
 /**
  * The most frontfacing GUI
@@ -10,27 +11,8 @@ import UI from '../../../database/uiConstants'
  */
 export default function gui(props) {
   return (
-    <div 
-      className={`Layer Floating ForegroundGUI`}
-    >
-      {createInner(props.theme, props.routeState, props.elements)}
-    </div>
-  )
-}
-
-// generate inner componenets based on constants provided
-function createInner(theme, routeState, elements) {
-  // const of element types
-  const ELEMENT_CONSTANTS = UI(theme, routeState).Foreground
-
-  // render elements
-  let list = []
-  elements.forEach((string) => (
-    list.push(
-      ELEMENT_CONSTANTS[string]
-    )
-  ))
-
-  // return list
-  return list
+    <Layer isFloating zIndex={2}>
+      {createInner(2, props.theme, props.elements, props.routeState)}
+    </Layer>
+  );
 }

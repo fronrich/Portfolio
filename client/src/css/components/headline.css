@@ -3,9 +3,14 @@
 }
 
 .Headline {
+  transition: 200ms;
   border: solid 5px;
   padding: 40px;
   margin: 40px;
   width: fit-content;
   height: fit-content;
+}
+
+.Headline:hover {
+  background-color:rgba(0, 0, 0, 0.5);
 }

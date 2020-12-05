@@ -1,5 +1,6 @@
-import React from 'react'
-import GalleryTitle from './galleryTitle'
+import React from "react";
+import { Layer } from "../gui/layers/styles/layers.styles";
+import { GalleryTitle, Gallery } from "./styles/gallery.styles";
 
 /**
  * Returns a container with important info
@@ -8,19 +9,16 @@ import GalleryTitle from './galleryTitle'
  */
 export default function gallery(props) {
   return (
-    <div className={`Layer Floating FlexLayer`}>
+    <Layer isFloating isFlexLayer>
       <GalleryTitle
-        colorID = {props.colorID}
-        title = {props.title}
-        subtitle = {props.subtitle}
-      />
-      <div 
-        className={
-          `Element Gallery FontMono Border_${props.colorID} Foreground_${props.colorID}`
-        }
+        colorID={props.colorID}
+        title={props.title}
+        subtitle={props.subtitle}
       >
-        {props.items}
-      </div>
-    </div>
-  )
+        <p>~{props.title}~</p>
+        <p>~{props.subtitle}~</p>
+      </GalleryTitle>
+      <Gallery colorID={props.colorID}>{props.items}</Gallery>
+    </Layer>
+  );
 }

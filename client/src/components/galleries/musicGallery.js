@@ -1,8 +1,11 @@
-import React from 'react'
-
-import Gallery from './gallery'
-
-import MusicData from '../../database/music.json'
+import React from "react";
+import GalleryContainer from "./gallery";
+import MusicData from "../../database/music.json";
+import {
+  GalleryImage,
+  GalleryCaption,
+  GalleryElement,
+} from "./styles/gallery.styles";
 
 /**
  * Visual representation of music database
@@ -10,58 +13,39 @@ import MusicData from '../../database/music.json'
  */
 export default function musicGallery(props) {
   return (
-    <div>
-      <Gallery
-        title = {props.title}
-        subtitle = {props.subtitle}
-        items={generateContents()}
-        colorID={props.colorID}
-      />
-    </div>
-  )
+    <GalleryContainer
+      title={props.title}
+      subtitle={props.subtitle}
+      items={generateContents()}
+      colorID={props.colorID}
+    />
+  );
 }
 
 // generate song elements
 function generateContents() {
-  let list = []
-  MusicData.map((key, index) => (
-    list.push(
-      musicGalleryItem(
-        index,
-        key.title,
-        key.url,
-        key.image
-      )
-    )
-  ))
-  return list
+  let list = [];
+  MusicData.map((key, index) =>
+    list.push(musicGalleryItem(index, key.title, key.url, key.image))
+  );
+  return list;
 }
 
 // song element component
 const musicGalleryItem = (key, title, url, image) => {
   return (
-    <a
+    <GalleryElement
       key={key}
-      className={`SongElement GalleryElement FontMono`}
       href={url}
-      target="_blank" 
+      target="_blank"
       rel="noopener noreferrer"
     >
-      <div 
-        className={`GalleryElementLayer GalleryImage`}
-      >
-        <img 
-          src={image} 
-          alt={title}
-        />
-      </div>
-      <div
-        className={`GalleryElementLayer GalleryCaption`}
-      >
-        <span>
-          {title}
-        </span>
-      </div>
-    </a>
+      <GalleryImage>
+        <img src={image} alt={title} />
+      </GalleryImage>
+      <GalleryCaption className={`GalleryCaption`}>
+        <span>{title}</span>
+      </GalleryCaption>
+    </GalleryElement>
   );
-}
+};

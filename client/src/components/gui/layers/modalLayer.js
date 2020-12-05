@@ -1,35 +1,16 @@
-import React from 'react'
-import UI from '../../../database/uiConstants'
+import React from "react";
+import { createInner } from "./functions/createInner";
+import { Layer } from "./styles/layers.styles";
 
 /**
- * 
+ *
  * @param {Array} props.theme color theme
  * @param {String Array} props.elements - elements to render
  */
 export default function modalLayer(props) {
   return (
-    <div
-    className={`Layer ModalLayer`}
-    >
-      {createInner(props.theme, props.elements)}
-    </div>
-  )
-}
-
-function createInner(theme, elements) {
-
-  const ELEMENT_CONSTANTS = UI(theme).ModalLayer
-
-  // render elements
-  let list = []
-  if (elements === undefined)
-    return list
-  elements.forEach((string) => (
-    list.push(
-      ELEMENT_CONSTANTS[string]
-    )
-  ))
-
-  // return list
-  return list
+    <Layer isFloating zIndex={1}>
+      {createInner(1, props.theme, props.elements)}
+    </Layer>
+  );
 }
