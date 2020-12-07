@@ -1,7 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
-import MenuButton from './menuButton';
-import MenuLinks from './menuLinks';
+import MenuButton from "./menuButton";
+import MenuLinks from "./menuLinks";
+
+import { MenuContent, MenuOverlay } from "./styles.js/menu.styles";
 
 export default function Menu(props) {
   // initial state
@@ -15,36 +17,24 @@ export default function Menu(props) {
   }
 
   return (
-    <div className="Menu">
-      <MenuButton 
-        colorID={props.colorID[1]} 
-        handler={passUp} 
+    <>
+      <MenuButton
+        colorID={props.colorID[1]}
+        handler={passUp}
         onChange={passUp}
       />
       {ShowMenu(visible, props)}
-    </div>
-  )
+    </>
+  );
 }
 
 function ShowMenu(isVisible, props) {
-  var menuState = isVisible ? "" : "_Hidden";
   return (
-    <div className="MenuWrapper">
-      <div 
-        className={
-          `Layer MenuOverlay${menuState} Background_${props.colorID[0]}`
-        } 
-      />
-      <div 
-        className={
-          `Layer MenuContent${menuState}`
-        }
-      > 
-        <MenuLinks 
-          isVisible={isVisible}
-          colorID={props.colorID[1]} 
-        />
-      </div>
-    </div>
-  )
+    <>
+      <MenuOverlay colorID={props.colorID} isHidden={!isVisible} />
+      <MenuContent isHidden={!isVisible}>
+        <MenuLinks isVisible={isVisible} colorID={props.colorID[1]} />
+      </MenuContent>
+    </>
+  );
 }

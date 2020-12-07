@@ -1,5 +1,5 @@
 import React from "react";
-import { Layer } from "../gui/layers/styles/layers.styles";
+import { Layer } from "../styles/layers.styles";
 import { GalleryTitle, Gallery } from "./styles/gallery.styles";
 
 /**
@@ -9,7 +9,7 @@ import { GalleryTitle, Gallery } from "./styles/gallery.styles";
  */
 export default function gallery(props) {
   return (
-    <Layer isFloating isFlexLayer>
+    <Layer isFloating alignTop isFlexLayer>
       <GalleryTitle
         colorID={props.colorID}
         title={props.title}

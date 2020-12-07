@@ -1,6 +1,6 @@
 import React from "react";
 import { createInner } from "./functions/createInner";
-import { Layer } from "./styles/layers.styles";
+import { Layer } from "../../styles/layers.styles";
 
 /**
  * Create a body for a webpage

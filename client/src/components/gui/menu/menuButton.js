@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
+import { MenuButtonContainer, Strip } from "./styles.js/menu.styles";
 
 export default function MenuButton(props) {
   // initial state
@@ -12,10 +13,10 @@ export default function MenuButton(props) {
     props.handler();
   }
   return (
-    <div className={`Element MenuButton`} onClick={passUp}>
+    <MenuButtonContainer onClick={passUp}>
       {RenderStrips(visible, props)}
-    </div>
-  )
+    </MenuButtonContainer>
+  );
 }
 
 // render the strips
@@ -24,8 +25,13 @@ function RenderStrips(visible, props) {
   let strips = [];
   const MAX_STRIPS = 4;
   const COLOR_ID = props.colorID;
-  for(var index = 1; index <= MAX_STRIPS; index++) {
-    strips.push(<div key={index} className={`Strip Strip_${index}${state} Background_${COLOR_ID}`} />);
+  for (var index = 1; index <= MAX_STRIPS; index++) {
+    strips.push(
+      <Strip
+        key={index}
+        className={`Strip Strip_${index}${state} Background_${COLOR_ID}`}
+      />
+    );
   }
   return strips;
 }

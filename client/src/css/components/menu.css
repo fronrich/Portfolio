@@ -63,25 +63,29 @@
   transition: 200ms;
 }
 
-.Strip_1, .Strip_1_X {
+.Strip_1 {
   top: 0px;
-} .Strip_2, .Strip_2_X {
+} .Strip_2 {
   top: 10px;
-} .Strip_3, .Strip_3_X {
+} .Strip_3 {
   top : 0px;
-} .Strip_4, .Strip_4_X {
+} .Strip_4 {
   top: 10px;
 }
 
 /* transition */
 .Strip_1_X {
+  top: 0px;
   transform: translateY(30px);
   opacity: 0;
 } .Strip_2_X {
+  top: 10px;
   transform: rotate(45deg);
 } .Strip_3_X {
+  top: 0px;
   transform: rotate(-45deg);
 } .Strip_4_X {
+  top: 10px;
   transform: translateY(-30px);
   opacity: 0;
 }

@@ -3,7 +3,7 @@ import { GalleryElementLayer } from "./variants";
 import { COLORS, FONTS } from "../../styles/themes";
 
 export const GalleryTitle = styled.div`
-  ${FONTS.title}
+  ${FONTS.header}
   ${({ colorID }) => (colorID ? `color: ${COLORS[colorID[1]]};` : "")}
   width: max-content;
   & p {
@@ -19,7 +19,8 @@ export const Gallery = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 90%;
-  max-height: 60%;
+  max-height: 65%;
+  margin: 20px;
   overflow-y: scroll;
   pointer-events: all;
 
