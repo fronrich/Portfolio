@@ -4,7 +4,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // import routes
-import { Landing, Sound, Visuals } from "./routes/Routes";
+import { Code, Landing, Sound, Visuals } from "./routes/Routes";
 import PATH from "./database/links.json";
 
 // universal stylings
@@ -26,6 +26,11 @@ function App() {
           path={PATH.sound}
           exact
           render={(props) => <Sound routeLocation={"sound"} {...props} />}
+        />
+        <Route
+          path={PATH.code}
+          exact
+          render={(props) => <Code routeLocation={"code"} {...props} />}
         />
         <Route
           path={PATH.visuals}

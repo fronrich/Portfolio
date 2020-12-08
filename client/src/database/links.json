@@ -1,7 +1,7 @@
 {
   "home" : "/",
   "sound" : "/sound",
-  "code" : "link",
+  "code" : "/code",
   "visuals" : "/visuals",
-  "bio" : "link"
+  "bio" : "/bio"
 }

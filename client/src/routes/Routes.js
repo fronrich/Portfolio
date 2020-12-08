@@ -31,6 +31,16 @@ export function Sound() {
   );
 }
 
+export function Code() {
+  return (
+    <Page
+      backgroundColor={2}
+      foregroundColor={3}
+      backgroundElements={["MusicGallery"]}
+    />
+  );
+}
+
 export function Visuals() {
   return (
     <Page
