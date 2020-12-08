@@ -35,18 +35,33 @@ const Page = (props) => {
   //set theme
   const THEME = [props.backgroundColor, props.foregroundColor];
 
+  // define constants here
+  // these will appear on every layer
+  const BACKGROUND_CONSTANTS = [];
+  const MODAL_LAYER_CONSTANTS = [];
+  const FOREGROUND_CONSTANTS = ["Menu", "Social"];
+
+  const backgroundAll =
+    props.backgroundElements !== undefined
+      ? [...BACKGROUND_CONSTANTS, ...props.backgroundElements]
+      : BACKGROUND_CONSTANTS;
+  const modalLayerAll =
+    props.modalLayerElements !== undefined
+      ? [...MODAL_LAYER_CONSTANTS, ...props.modalLayerElements]
+      : MODAL_LAYER_CONSTANTS;
+  const foregroundAll =
+    props.foregroundElements !== undefined
+      ? [...FOREGROUND_CONSTANTS, ...props.foregroundElements]
+      : FOREGROUND_CONSTANTS;
+
   return (
     <div>
-      <BackgroundGUI
-        theme={THEME}
-        blur={blur}
-        elements={props.backgroundElements}
-      />
-      <ModalLayer theme={THEME} elements={props.modalLayerElements} />
+      <BackgroundGUI theme={THEME} blur={blur} elements={backgroundAll} />
+      <ModalLayer theme={THEME} elements={modalLayerAll} />
       <ForegroundGUI
         theme={THEME}
         routeState={routeState}
-        elements={props.foregroundElements}
+        elements={foregroundAll}
       />
     </div>
   );

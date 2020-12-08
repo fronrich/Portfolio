@@ -1,5 +1,4 @@
 import React from "react";
-import Social from "../components/gui/social/social";
 import Page from "../components/page";
 
 export default function Sound() {
@@ -8,7 +7,6 @@ export default function Sound() {
       backgroundColor={0}
       foregroundColor={2}
       backgroundElements={["MusicGallery"]}
-      foregroundElements={["Menu", "Social"]}
     />
   );
 }

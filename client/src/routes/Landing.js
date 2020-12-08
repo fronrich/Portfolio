@@ -7,7 +7,6 @@ export default function Landing() {
       backgroundColor={2}
       foregroundColor={3}
       backgroundElements={["Wallpaper", "Headline"]}
-      foregroundElements={["Menu", "Social"]}
     />
   );
 }
