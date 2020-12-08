@@ -4,8 +4,8 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // import routes
-import Landing from "./routes/Landing";
-import Sound from "./routes/Sound";
+import { Landing, Sound, Visuals } from "./routes/Routes";
+import PATH from "./database/links.json";
 
 // universal stylings
 import "./css/App.css";
@@ -18,14 +18,19 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route
-          path="/"
+          path={PATH.home}
           exact
           render={(props) => <Landing routeLocation={"root"} {...props} />}
         />
         <Route
-          path="/sound"
+          path={PATH.sound}
           exact
           render={(props) => <Sound routeLocation={"sound"} {...props} />}
+        />
+        <Route
+          path={PATH.visuals}
+          exact
+          render={(props) => <Visuals routeLocation={"visuals"} {...props} />}
         />
       </Switch>
     </BrowserRouter>
