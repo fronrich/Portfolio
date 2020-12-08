@@ -12,6 +12,7 @@ export default function MenuButton(props) {
     // update parent
     props.handler();
   }
+  console.log(props.colorID);
   return (
     <MenuButtonContainer onClick={passUp}>
       {RenderStrips(visible, props)}
@@ -29,6 +30,7 @@ function RenderStrips(visible, props) {
     strips.push(
       <Strip
         key={index}
+        colorID={props.colorID}
         className={`Strip Strip_${index}${state} Background_${COLOR_ID}`}
       />
     );

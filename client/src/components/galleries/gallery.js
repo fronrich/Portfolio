@@ -1,6 +1,7 @@
 import React from "react";
+import GalleryTitle from "./galleryTitle";
 import { Layer } from "../styles/layers.styles";
-import { GalleryTitle, Gallery } from "./styles/gallery.styles";
+import { Gallery } from "./styles/gallery.styles";
 
 /**
  * Returns a container with important info
@@ -14,10 +15,7 @@ export default function gallery(props) {
         colorID={props.colorID}
         title={props.title}
         subtitle={props.subtitle}
-      >
-        <p>~{props.title}~</p>
-        <p>~{props.subtitle}~</p>
-      </GalleryTitle>
+      />
       <Gallery colorID={props.colorID}>{props.items}</Gallery>
     </Layer>
   );

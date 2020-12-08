@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { LayerTemplate } from "../../../styles/variants";
-import { COLORS } from "../../../styles/themes";
+import { COLORS, FONTS } from "../../../styles/themes";
 
 export const MenuOverlay = styled.div`
   ${LayerTemplate}
@@ -29,6 +29,35 @@ export const MenuContent = styled.div`
     transform: translateX(500px);
   `
       : ""}
+`;
+
+export const MenuLinksContainer = styled.div`
+  ${FONTS.header}
+  color: ${({ colorID }) => COLORS[colorID[1]]};
+  /* color: red; */
+  width: fit-content;
+  height: fit-content;
+  text-align: right;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MenuLinkContainer = styled.a`
+  pointer-events: ${({ isVisible }) => (isVisible ? "all" : "none")};
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
+
+export const Strip = styled.div`
+  background-color: ${({ colorID }) => COLORS[colorID[1]]};
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+  height: 10px;
+  margin: 0px;
+  padding: 0px;
+  transition: 200ms;
 `;
 
 export const MenuButtonContainer = styled.div`
@@ -70,14 +99,4 @@ export const MenuButtonContainer = styled.div`
     transform: translateY(-30px);
     opacity: 0;
   }
-`;
-
-export const Strip = styled.div`
-  pointer-events: none;
-  position: relative;
-  width: 100%;
-  height: 10px;
-  margin: 0px;
-  padding: 0px;
-  transition: 200ms;
 `;

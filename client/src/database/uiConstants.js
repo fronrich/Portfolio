@@ -11,18 +11,14 @@ export default function UI_CONSTANTS(theme, routeState) {
   return {
     Foreground: {
       Menu: <Menu colorID={theme} handler={routeState} />,
-      Social: <SocialBar colorID={theme[1]} />,
+      Social: <SocialBar colorID={theme} />,
     },
     Modal: {},
     Background: {
       Wallpaper: <img className="Wallpaper" src={Wallpaper} alt="cello" />,
       Headline: <Headline item={<HeadlineData />} colorID={theme[1]} />,
       MusicGallery: (
-        <MusicGallery
-          title="sounds"
-          subtitle="made with <3"
-          colorID={theme[1]}
-        />
+        <MusicGallery title="sounds" subtitle="made with <3" colorID={theme} />
       ),
     },
   };

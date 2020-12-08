@@ -18,11 +18,7 @@ export default function Menu(props) {
 
   return (
     <>
-      <MenuButton
-        colorID={props.colorID[1]}
-        handler={passUp}
-        onChange={passUp}
-      />
+      <MenuButton colorID={props.colorID} handler={passUp} onChange={passUp} />
       {ShowMenu(visible, props)}
     </>
   );
@@ -33,7 +29,7 @@ function ShowMenu(isVisible, props) {
     <>
       <MenuOverlay colorID={props.colorID} isHidden={!isVisible} />
       <MenuContent isHidden={!isVisible}>
-        <MenuLinks isVisible={isVisible} colorID={props.colorID[1]} />
+        <MenuLinks isVisible={isVisible} colorID={props.colorID} />
       </MenuContent>
     </>
   );
