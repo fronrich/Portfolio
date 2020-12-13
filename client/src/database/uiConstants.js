@@ -4,7 +4,11 @@ import Menu from "../components/gui/menu/menu";
 import Wallpaper from "../assets/cello_final_retouch.gif";
 import Headline from "../components/landing/headline";
 import HeadlineData from "./headline";
-import MusicGallery from "../components/galleries/musicGallery";
+import MusicGalleryContainer from "../components/galleries/musicGallery";
+import GalleryTypeRow from "../components/galleries/galleryTypeRow";
+
+// database
+import { VISUAL } from "./albums.json";
 
 // UI Warehouse
 export default function UI_CONSTANTS(theme, routeState) {
@@ -18,7 +22,18 @@ export default function UI_CONSTANTS(theme, routeState) {
       Wallpaper: <img className="Wallpaper" src={Wallpaper} alt="cello" />,
       Headline: <Headline item={<HeadlineData />} colorID={theme[1]} />,
       MusicGallery: (
-        <MusicGallery title="sounds" subtitle="made with <3" colorID={theme} />
+        <MusicGalleryContainer
+          title="sounds"
+          subtitle="made with <3"
+          colorID={theme}
+        />
+      ),
+      PhotoGallery: (
+        <GalleryTypeRow
+          title="visuals"
+          subtitle="little stories"
+          album={VISUAL}
+        />
       ),
     },
   };

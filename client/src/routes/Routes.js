@@ -46,7 +46,7 @@ export function Visuals() {
     <Page
       backgroundColor={3}
       foregroundColor={0}
-      backgroundElements={["MusicGallery"]}
+      backgroundElements={["PhotoGallery"]}
     />
   );
 }
