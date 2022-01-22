@@ -13,7 +13,7 @@
     "file-saver": "^2.0.2",
     "jsdom": "^16.3.0",
     "lodash": "^4.17.19",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "puppeteer": "^5.2.1",
     "puppeteer-extra": "^3.1.13",
     "puppeteer-extra-plugin-stealth": "^2.4.14"
